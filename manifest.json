@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Remove 'All Mobile Devices' from Dropdown",
+  "version": "1.0",
+  "description": "Removes 'All Mobile Devices' from dropdowns on websites",
+  "permissions": ["activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "all_frames": true
+    }
+  ]
+}
